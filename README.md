@@ -1,0 +1,23 @@
+### Methods:
+
+isType, 
+isArray, 
+isNan, 
+isString, 
+isNumber, 
+isBoolean, 
+isUndefined, 
+isDefined, 
+isEmpty, 
+isClass, 
+isFunction, 
+isObject, 
+isNull, 
+isDOM, 
+isArguments, 
+isDate, 
+isAsync, 
+isUrl, 
+isBase64, 
+isEmptyObject, 
+isEmptyArray

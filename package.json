@@ -1,0 +1,24 @@
+{
+  "name": "valid-types",
+  "version": "1.0.0",
+  "description": "A small JS type checker",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "NODE_ENV=development node build",
+    "build": "NODE_ENV=production node build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexSergey/valid-types.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexSergey/valid-types/issues"
+  },
+  "homepage": "https://github.com/AlexSergey/valid-types#readme",
+  "devDependencies": {
+    "rocket-starter": "git+https://github.com/AlexSergey/rocket-starter.git"
+  }
+}
