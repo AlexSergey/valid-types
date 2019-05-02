@@ -1,6 +1,6 @@
 {
   "name": "valid-types",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A small JS type checker",
   "main": "dist/main.js",
   "scripts": {
@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/AlexSergey/valid-types#readme",
   "devDependencies": {
-    "rocket-starter": "git+https://github.com/AlexSergey/rocket-starter.git"
+    "rocket-starter": "1.0.0"
   }
 }
