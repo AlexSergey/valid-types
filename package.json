@@ -1,8 +1,8 @@
 {
   "name": "valid-types",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A small JS type checker",
-  "main": "dist/index.js",
+  "main": "dist/main.js",
   "scripts": {
     "start": "NODE_ENV=development node build",
     "build": "NODE_ENV=production node build"
