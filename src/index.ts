@@ -55,25 +55,23 @@ function _isUrl(s: string) {
     return regexp.test(s);
 }
 
-const isArray = (obj: any): boolean => isType(obj) === 'array';
-const isNan = (obj: any): boolean => isNaN(obj);
-const isString = (obj: any): boolean => isType(obj) === 'string';
-const isNumber = (obj: any): boolean => isType(obj) === 'number' && isNaN(obj) === false;
-const isBoolean = (obj: any): boolean => isType(obj) === 'boolean';
-const isUndefined = (obj: any): boolean => isType(obj) === 'undefined';
-const isDefined = (obj: any): boolean =>  typeof obj !== 'undefined';
-const isEmpty = (obj: any): boolean => (obj === '' || obj === 0 || obj === '0' || obj === null || obj === false || !obj);
-const isClass = (obj: any): boolean => isType(obj) === 'class';
-const isFunction = (obj: any): boolean => isType(obj) === 'function';
-const isObject = (obj: any): boolean => isType(obj) === 'object';
-const isNull = (obj: any): boolean => isType(obj) === 'null';
-const isDOM = (obj: any): boolean => isType(obj) === 'dom';
-const isArguments = (obj: any): boolean => isType(obj) === 'arguments';
-const isDate = (obj: any): boolean => isType(obj) === 'date';
-const isAsync = (cb: any): boolean => cb instanceof Promise;
-const isUrl = (url: any): boolean => isType(url) === 'string' && _isUrl(url);
-const isBase64 = (str: any): boolean => isString(str) && str.indexOf('base64') >= 0 && str.indexOf('data:') === 0;
-const isEmptyObject = (obj: any): boolean => isObject(obj) ? Object.keys(obj).length === 0 : false;
-const isEmptyArray = (obj: any): boolean => isArray(obj) ? obj.length === 0 : false;
-
-module.exports = { isType, isArray, isNan, isString, isNumber, isBoolean, isUndefined, isDefined, isEmpty, isClass, isFunction, isObject, isNull, isDOM, isArguments, isDate, isAsync, isUrl, isBase64, isEmptyObject, isEmptyArray };
+export const isArray = (obj: any): boolean => isType(obj) === 'array';
+export const isNan = (obj: any): boolean => isNaN(obj);
+export const isString = (obj: any): boolean => isType(obj) === 'string';
+export const isNumber = (obj: any): boolean => isType(obj) === 'number' && isNaN(obj) === false;
+export const isBoolean = (obj: any): boolean => isType(obj) === 'boolean';
+export const isUndefined = (obj: any): boolean => isType(obj) === 'undefined';
+export const isDefined = (obj: any): boolean =>  typeof obj !== 'undefined';
+export const isEmpty = (obj: any): boolean => (obj === '' || obj === 0 || obj === '0' || obj === null || obj === false || !obj);
+export const isClass = (obj: any): boolean => isType(obj) === 'class';
+export const isFunction = (obj: any): boolean => isType(obj) === 'function';
+export const isObject = (obj: any): boolean => isType(obj) === 'object';
+export const isNull = (obj: any): boolean => isType(obj) === 'null';
+export const isDOM = (obj: any): boolean => isType(obj) === 'dom';
+export const isArguments = (obj: any): boolean => isType(obj) === 'arguments';
+export const isDate = (obj: any): boolean => isType(obj) === 'date';
+export const isAsync = (cb: any): boolean => cb instanceof Promise;
+export const isUrl = (url: any): boolean => isType(url) === 'string' && _isUrl(url);
+export const isBase64 = (str: any): boolean => isString(str) && str.indexOf('base64') >= 0 && str.indexOf('data:') === 0;
+export const isEmptyObject = (obj: any): boolean => isObject(obj) ? Object.keys(obj).length === 0 : false;
+export const isEmptyArray = (obj: any): boolean => isArray(obj) ? obj.length === 0 : false;
