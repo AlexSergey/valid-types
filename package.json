@@ -1,8 +1,8 @@
 {
   "name": "valid-types",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A small JS type checker",
-  "main": "dist/main.js",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "start": "cross-env NODE_ENV=development node build",
