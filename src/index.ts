@@ -55,7 +55,7 @@ function _isUrl(s: string) {
     return regexp.test(s);
 }
 
-export const isArray = (obj: any): boolean => isType(obj) === 'array';
+export const isArray = (obj: any): boolean => Array.isArray(obj);
 export const isNan = (obj: any): boolean => isNaN(obj);
 export const isString = (obj: any): boolean => isType(obj) === 'string';
 export const isNumber = (obj: any): boolean => isType(obj) === 'number' && isNaN(obj) === false;

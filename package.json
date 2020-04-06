@@ -1,6 +1,6 @@
 {
   "name": "valid-types",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "A small JS type checker",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
