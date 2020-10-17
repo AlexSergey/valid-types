@@ -1,15 +1,13 @@
 {
   "name": "valid-types",
-  "version": "2.0.3",
+  "version": "2.0.5",
   "description": "A small JS type checker",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "start": "cross-env NODE_ENV=development node build",
-    "build": "npm run build:dist && npm run lib:cjs && npm run lib:esm",
-    "build:dist": "cross-env NODE_ENV=production node build",
-    "lib:cjs": "cross-env NODE_ENV=production node build.source.cjs",
-    "lib:esm": "cross-env NODE_ENV=production node build.source.esm"
+    "build": "cross-env NODE_ENV=production node build",
+    "production": "npm run build && npm publish"
   },
   "repository": {
     "type": "git",
@@ -23,6 +21,6 @@
   },
   "homepage": "https://github.com/AlexSergey/valid-types#readme",
   "devDependencies": {
-    "rocket-starter": "1.15.5"
+    "@rockpack/compiler": "1.0.0"
   }
 }
