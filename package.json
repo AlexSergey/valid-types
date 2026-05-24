@@ -1,26 +1,55 @@
 {
   "name": "valid-types",
-  "version": "2.0.5",
+  "version": "3.0.0",
   "description": "A small JS type checker",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "start": "cross-env NODE_ENV=development node build",
-    "build": "cross-env NODE_ENV=production node build",
-    "production": "npm run build && npm publish"
+  "keywords": [
+    "type-check",
+    "types",
+    "validation"
+  ],
+  "homepage": "https://github.com/AlexSergey/valid-types#readme",
+  "bugs": {
+    "url": "https://github.com/AlexSergey/valid-types/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AlexSergey/valid-types.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/AlexSergey/valid-types/issues"
+  "license": "MIT",
+  "author": "Aleksandrov Sergey <gooddev.sergey@gmail.com> (https://github.com/AlexSergey/rockpack)",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./lib/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
   },
-  "homepage": "https://github.com/AlexSergey/valid-types#readme",
+  "main": "dist/index.js",
+  "module": "lib/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production node scripts.build.js",
+    "format": "npm run format:prettier && npm run format:code",
+    "format:code": "eslint . --fix",
+    "format:prettier": "prettier --write \"src/**/*.{ts,tsx,json}\"",
+    "lint": "npm run lint:ts && npm run lint:code",
+    "lint:code": "eslint .",
+    "lint:commit": "commitlint --config .commitlintrc.cjs --edit",
+    "lint:ts": "tsc --noEmit",
+    "production": "npm run lint && npm run test && npm run build && npm publish",
+    "start": "cross-env NODE_ENV=development node scripts.build.js",
+    "test": "cross-env NODE_ENV=test node scripts.tests.js"
+  },
   "devDependencies": {
-    "@rockpack/compiler": "1.0.0"
+    "@rockpack/codestyle": "8.0.0",
+    "@rockpack/compiler": "8.0.0",
+    "@rockpack/tester": "8.0.0",
+    "@rockpack/tsconfig": "8.0.0",
+    "cross-env": "10.1.0"
   }
 }
